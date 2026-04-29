@@ -1,0 +1,1283 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\revea> cd campus-companion
+PS C:\Users\revea\campus-companion> mkdir components lib types
+mkdir : A positional parameter cannot be found that accepts argument 'lib'.
+At line:1 char:1
++ mkdir components lib types
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\Users\revea\campus-companion> mkdir components
+
+
+    Directory: C:\Users\revea\campus-companion
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     16:43                components
+
+
+PS C:\Users\revea\campus-companion> mkdir lib
+
+
+    Directory: C:\Users\revea\campus-companion
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     16:44                lib
+
+
+PS C:\Users\revea\campus-companion> mkdir types
+
+
+    Directory: C:\Users\revea\campus-companion
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     16:44                types
+
+
+PS C:\Users\revea\campus-companion> mkdir app/events
+mkdir : An item with the specified name C:\Users\revea\campus-companion\app\events already exists.
+At line:1 char:1
++ mkdir app/events
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Users\revea\...nion\app\events:String) [New-Item], IOException
+    + FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\revea\campus-companion> mkdir app/helpdesk
+
+
+    Directory: C:\Users\revea\campus-companion\app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     16:44                helpdesk
+
+
+PS C:\Users\revea\campus-companion> mkdir/lost-found
+mkdir/lost-found : The term 'mkdir/lost-found' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try
+again.
+At line:1 char:1
++ mkdir/lost-found
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (mkdir/lost-found:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\revea\campus-companion> mkdir app/lost-found
+
+
+    Directory: C:\Users\revea\campus-companion\app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     16:45                lost-found
+
+
+PS C:\Users\revea\campus-companion> mkdir app/canteen-menu
+
+
+    Directory: C:\Users\revea\campus-companion\app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     16:45                canteen-menu
+
+
+PS C:\Users\revea\campus-companion> touch components/Navbar.tsx
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch components/Navbar.tsx
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\revea\campus-companion> New-Item components/Navbar.tsx
+
+
+    Directory: C:\Users\revea\campus-companion\components
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/04/2026     16:47              0 Navbar.tsx
+
+
+PS C:\Users\revea\campus-companion> New-Item components/EventCard.tsx
+
+
+    Directory: C:\Users\revea\campus-companion\components
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/04/2026     16:47              0 EventCard.tsx
+
+
+PS C:\Users\revea\campus-companion> New-Item components/FilterBar.tsx
+
+
+    Directory: C:\Users\revea\campus-companion\components
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/04/2026     16:47              0 FilterBar.tsx
+
+
+PS C:\Users\revea\campus-companion> New-Item lib/supabaseClient.ts
+
+
+    Directory: C:\Users\revea\campus-companion\lib
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/04/2026     16:49              0 supabaseClient.ts
+
+
+PS C:\Users\revea\campus-companion> New-Item types/event.ts
+
+
+    Directory: C:\Users\revea\campus-companion\types
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/04/2026     16:49              0 event.ts
+
+
+PS C:\Users\revea\campus-companion> New-Item types/ticket.ts
+
+
+    Directory: C:\Users\revea\campus-companion\types
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        29/04/2026     16:49              0 ticket.ts
+
+
+PS C:\Users\revea\campus-companion> npm install @supabase/supabase-js
+
+added 10 packages, and audited 370 packages in 3s
+
+142 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\Users\revea\campus-companion> npm fund
+campus-companion@0.1.0
++-- https://eslint.org/donate
+| | `-- eslint@9.39.4, @eslint/js@9.39.4
+| +-- https://opencollective.com/eslint
+| |   `-- @eslint-community/eslint-utils@4.9.1, eslint-visitor-keys@3.4.3, @eslint/eslintrc@3.3.5, eslint-scope@8.4.0, eslint-visitor-keys@4.2.1, espree@10.4.0, eslint-visitor-keys@5.0.1
+| +-- https://github.com/sponsors/nzakas
+| |   `-- @humanwhocodes/module-importer@1.0.1, @humanwhocodes/retry@0.4.3
+| +-- https://github.com/sponsors/epoberezkin
+| |   `-- ajv@6.15.0
+| `-- https://github.com/chalk/chalk?sponsor=1
+|   | `-- chalk@4.1.2
+|   `-- https://github.com/chalk/ansi-styles?sponsor=1
+|       `-- ansi-styles@4.3.0
++-- https://opencollective.com/browserslist
+|   `-- caniuse-lite@1.0.30001791, browserslist@4.28.2, update-browserslist-db@1.2.3
++-- https://opencollective.com/postcss/
+|   `-- postcss@8.5.12
++-- https://opencollective.com/libvips
+|   `-- sharp@0.34.5, @img/sharp-win32-x64@0.34.5
++-- https://opencollective.com/parcel
+|   `-- lightningcss@1.32.0, lightningcss-win32-x64-msvc@1.32.0
++-- https://opencollective.com/webpack
+|   `-- tapable@2.3.3
++-- https://opencollective.com/eslint-import-resolver-typescript
+| | `-- eslint-import-resolver-typescript@3.10.1
+| +-- https://github.com/privatenumber/get-tsconfig?sponsor=1
+| | | `-- get-tsconfig@4.14.0
+| | `-- https://github.com/privatenumber/resolve-pkg-maps?sponsor=1
+| |     `-- resolve-pkg-maps@1.0.0
+| +-- https://github.com/sponsors/SuperchupuDev
+| | | `-- tinyglobby@0.2.16
+| | `-- https://github.com/sponsors/jonschlinkert
+| |     `-- picomatch@4.0.4, picomatch@2.3.2
+| `-- https://opencollective.com/unrs-resolver
+|   | `-- unrs-resolver@1.11.1
+|   `-- https://opencollective.com/napi-postinstall
+|       `-- napi-postinstall@0.3.4
++-- https://opencollective.com/typescript-eslint
+|   `-- typescript-eslint@8.59.1, @typescript-eslint/eslint-plugin@8.59.1, @typescript-eslint/scope-manager@8.59.1, @typescript-eslint/types@8.59.1, @typescript-eslint/type-utils@8.59.1, @typescript-eslint/visitor-keys@8.59.1, @typescript-eslint/parser@8.59.1, @typescript-eslint/typescript-estree@8.59.1,@typescript-eslint/project-service@8.59.1, @typescript-eslint/tsconfig-utils@8.59.1, @typescript-eslint/utils@8.59.1
++-- https://github.com/sponsors/feross
+|   `-- run-parallel@1.2.0, queue-microtask@1.2.3
++-- https://github.com/sponsors/ljharb
+|   `-- is-core-module@2.16.1, function-bind@1.1.2, resolve@2.0.0-next.6, node-exports-info@1.6.0, array.prototype.flatmap@1.3.3, call-bind@1.0.9, get-intrinsic@1.3.0, gopd@1.2.0, has-symbols@1.1.0, define-data-property@1.1.4, has-property-descriptors@1.0.2, define-properties@1.2.1, es-abstract@1.24.2, array-buffer-byte-length@1.0.2, arraybuffer.prototype.slice@1.0.4, available-typed-arrays@1.0.7, call-bound@1.0.4, data-view-buffer@1.0.2, data-view-byte-offset@1.0.1, es-to-primitive@1.3.0, is-date-object@1.1.0, is-symbol@1.1.1, function.prototype.name@1.1.8, functions-have-names@1.2.3, get-symbol-description@1.1.0, globalthis@1.0.4, has-proto@1.2.0, is-array-buffer@3.0.5, is-callable@1.2.7, is-data-view@1.0.2, is-negative-zero@2.0.3, is-regex@1.2.1, is-set@2.0.3, is-shared-array-buffer@1.0.4, is-string@1.1.1, is-typed-array@1.1.15, is-weakref@1.1.1, object-inspect@1.13.4, object.assign@4.1.7, own-keys@1.0.1, regexp.prototype.flags@1.5.4, safe-array-concat@1.1.4, safe-push-apply@1.0.0, safe-regex-test@1.1.0, string.prototype.trim@1.2.10, string.prototype.trimend@1.0.9, string.prototype.trimstart@1.0.8, typed-array-byte-length@1.0.3, for-each@0.3.5, typed-array-byte-offset@1.0.4, reflect.getprototypeof@1.0.10, which-builtin-type@1.2.1, is-async-function@2.1.1, is-finalizationregistry@1.1.1, is-generator-function@1.1.2, which-boxed-primitive@1.1.1, is-bigint@1.1.0, has-bigints@1.1.0, is-boolean-object@1.2.2, is-number-object@1.1.1, which-collection@1.0.2, is-map@2.0.3, is-weakmap@2.0.2, is-weakset@2.0.4, typed-array-length@1.0.7, unbox-primitive@1.1.0, which-typed-array@1.1.20, has-tostringtag@1.0.2, side-channel@1.1.0, side-channel-list@1.0.1, side-channel-map@1.0.1, side-channel-weakmap@1.0.2, supports-preserve-symlinks-flag@1.0.0, array-includes@3.1.9, array.prototype.findlastindex@1.2.6, array.prototype.flat@1.3.3, object.fromentries@2.0.8, object.values@1.2.1, minimist@1.2.8, array.prototype.findlast@1.2.5, string.prototype.matchall@4.0.12
++-- https://opencollective.com/babel
+|   `-- @babel/core@7.29.0
+`-- https://github.com/sponsors/colinhacks
+    `-- zod@4.3.6
+
+PS C:\Users\revea\campus-companion> npm run dev
+
+> campus-companion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.223:3000
+- Environments: .env.local
+✓ Ready in 2.9s
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+PS C:\Users\revea\campus-companion>
+                                    ^C
+PS C:\Users\revea\campus-companion> y
+y : The term 'y' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ y
++ ~
+    + CategoryInfo          : ObjectNotFound: (y:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\revea\campus-companion> npm run dev
+
+> campus-companion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.223:3000
+- Environments: .env.local
+✓ Ready in 387ms
+
+PS C:\Users\revea\campus-companion>
+                                    ^C
+PS C:\Users\revea\campus-companion> npm run dev
+
+> campus-companion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.223:3000
+- Environments: .env.local
+✓ Ready in 372ms
+
+PS C:\Users\revea\campus-companion>
+                                    ^C
+PS C:\Users\revea\campus-companion> npm run dev
+
+> campus-companion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.223:3000
+- Environments: .env.local
+✓ Ready in 383ms
+
+○ Compiling /events ...
+ GET /events 200 in 4.9s (next.js: 4.7s, application-code: 195ms)
+ GET / 200 in 416ms (next.js: 391ms, application-code: 25ms)
+[browser] Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET /events 200 in 19ms (next.js: 3ms, application-code: 16ms)
+✓ Compiled in 25ms
+ GET /events 200 in 74ms (next.js: 53ms, application-code: 21ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 66ms
+ GET /events 200 in 127ms (next.js: 48ms, application-code: 79ms)
+ GET /events 200 in 160ms (next.js: 38ms, application-code: 122ms)
+ GET /events 200 in 102ms (next.js: 4ms, application-code: 98ms)
+ GET /events 200 in 93ms (next.js: 4ms, application-code: 89ms)
+ GET /events 200 in 93ms (next.js: 23ms, application-code: 70ms)
+ GET /events 200 in 93ms (next.js: 41ms, application-code: 52ms)
+ GET /events 200 in 93ms (next.js: 55ms, application-code: 39ms)
+ GET /events 200 in 73ms (next.js: 3ms, application-code: 70ms)
+ GET /events 200 in 56ms (next.js: 5ms, application-code: 51ms)
+ GET /events 200 in 36ms (next.js: 1903µs, application-code: 34ms)
+ GET /events 200 in 22ms (next.js: 3ms, application-code: 19ms)
+✓ Compiled in 65ms
+ GET /events 200 in 62ms (next.js: 3ms, application-code: 59ms)
+✓ Compiled in 46ms
+ GET /events 200 in 65ms (next.js: 42ms, application-code: 22ms)
+✓ Compiled in 41ms
+ GET /events 200 in 63ms (next.js: 44ms, application-code: 19ms)
+✓ Compiled in 20ms
+ GET /events 200 in 57ms (next.js: 40ms, application-code: 16ms)
+✓ Compiled in 42ms
+ GET /events 200 in 60ms (next.js: 40ms, application-code: 20ms)
+ GET /create-event 200 in 288ms (next.js: 274ms, application-code: 14ms)
+✓ Compiled in 46ms
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+ GET /create-event 500 in 2.4s (next.js: 2.3s, application-code: 132ms)
+ GET /create-event 500 in 2.4s (next.js: 2.4s, application-code: 7ms)
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+ GET /create-event 500 in 925ms (next.js: 467ms, application-code: 458ms)
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+ GET /create-event 500 in 876ms (next.js: 463ms, application-code: 413ms)
+✓ Compiled in 0ms
+ GET /create-event 500 in 491ms (next.js: 2ms, application-code: 489ms)
+[browser] Uncaught Error: The default export is not a React Component in "/create-event/page"
+ GET /create-event 200 in 149ms (next.js: 43ms, application-code: 107ms)
+ GET /events 200 in 27ms (next.js: 11ms, application-code: 16ms)
+ GET /events 200 in 156ms (next.js: 31ms, application-code: 125ms)
+ GET /events 200 in 124ms (next.js: 3ms, application-code: 121ms)
+ GET /events 200 in 96ms (next.js: 4ms, application-code: 92ms)
+ GET /events 200 in 97ms (next.js: 19ms, application-code: 78ms)
+ GET /events 200 in 97ms (next.js: 34ms, application-code: 63ms)
+ GET /events 200 in 97ms (next.js: 51ms, application-code: 46ms)
+ GET /events 200 in 130ms (next.js: 3ms, application-code: 127ms)
+ GET /events 200 in 110ms (next.js: 5ms, application-code: 104ms)
+ GET /events 200 in 80ms (next.js: 4ms, application-code: 76ms)
+ GET /events 200 in 79ms (next.js: 36ms, application-code: 43ms)
+ GET /events 200 in 81ms (next.js: 19ms, application-code: 62ms)
+ GET /events 200 in 80ms (next.js: 58ms, application-code: 22ms)
+✓ Compiled in 64ms
+ GET /events 200 in 96ms (next.js: 3ms, application-code: 94ms)
+ GET /helpdesk 200 in 286ms (next.js: 272ms, application-code: 14ms)
+ GET /helpdesk 200 in 141ms (next.js: 27ms, application-code: 114ms)
+ GET /helpdesk 200 in 111ms (next.js: 3ms, application-code: 108ms)
+ GET /helpdesk 200 in 84ms (next.js: 4ms, application-code: 80ms)
+ GET /helpdesk 200 in 84ms (next.js: 17ms, application-code: 66ms)
+ GET /helpdesk 200 in 84ms (next.js: 31ms, application-code: 53ms)
+ GET /helpdesk 200 in 105ms (next.js: 45ms, application-code: 60ms)
+ GET /helpdesk 200 in 108ms (next.js: 3ms, application-code: 105ms)
+ GET /helpdesk 200 in 91ms (next.js: 4ms, application-code: 87ms)
+ GET /helpdesk 200 in 84ms (next.js: 17ms, application-code: 66ms)
+ GET /helpdesk 200 in 85ms (next.js: 3ms, application-code: 82ms)
+ GET /helpdesk 200 in 101ms (next.js: 31ms, application-code: 70ms)
+ GET /helpdesk 200 in 73ms (next.js: 18ms, application-code: 54ms)
+ GET /helpdesk 200 in 40ms (next.js: 3ms, application-code: 36ms)
+ GET /helpdesk 200 in 22ms (next.js: 3ms, application-code: 18ms)
+✓ Compiled in 63ms
+✓ Compiled in 39ms
+ GET /helpdesk 200 in 62ms (next.js: 43ms, application-code: 19ms)
+ GET /canteen-menu 200 in 269ms (next.js: 254ms, application-code: 14ms)
+ GET /canteen-menu 200 in 87ms (next.js: 2ms, application-code: 84ms)
+✓ Compiled in 31ms
+ GET /canteen-menu 200 in 64ms (next.js: 41ms, application-code: 23ms)
+✓ Compiled in 61ms
+ GET /canteen-menu 200 in 58ms (next.js: 39ms, application-code: 19ms)
+✓ Compiled in 71ms
+ GET /canteen-menu 200 in 93ms (next.js: 64ms, application-code: 28ms)
+✓ Compiled in 62ms
+ GET /canteen-menu 200 in 58ms (next.js: 38ms, application-code: 20ms)
+ GET /lost-found 404 in 251ms (next.js: 236ms, application-code: 15ms)
+ GET /lost-found 404 in 72ms (next.js: 3ms, application-code: 69ms)
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames {
+  page: '/lost-found'
+}
+ GET /lost-found 500 in 733ms (next.js: 719ms, application-code: 14ms)
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames {
+  page: '/lost-found'
+}
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames {
+  page: '/lost-found'
+}
+ GET /lost-found 500 in 876ms (next.js: 414ms, application-code: 462ms)
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames {
+  page: '/lost-found'
+}
+ GET /lost-found 500 in 856ms (next.js: 469ms, application-code: 387ms)
+ GET /lost-found 500 in 398ms (next.js: 385ms, application-code: 13ms)
+[browser] Uncaught Error: The default export is not a React Component in "/lost-found/page"
+✓ Compiled in 75ms
+ GET /lost-found 200 in 148ms (next.js: 46ms, application-code: 103ms)
+✓ Compiled in 71ms
+⨯ ./app/lost-found/page.tsx:164:1
+Expected '</', got '<eof>'
+  162 |   </button>
+  163 | </form>
+> 164 |
+      | ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./app/lost-found/page.tsx [Client Component Browser]
+    ./app/lost-found/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/lost-found/page.tsx [Client Component SSR]
+    ./app/lost-found/page.tsx [Server Component]
+
+
+ GET /lost-found 500 in 433ms (next.js: 412ms, application-code: 21ms)
+⨯ ./app/lost-found/page.tsx:164:1
+Expected '</', got '<eof>'
+  162 |   </button>
+  163 | </form>
+> 164 |
+      | ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./app/lost-found/page.tsx [Client Component Browser]
+    ./app/lost-found/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/lost-found/page.tsx [Client Component SSR]
+    ./app/lost-found/page.tsx [Server Component]
+
+
+ GET /lost-found 500 in 15ms (next.js: 8ms, application-code: 8ms)
+⨯ ./app/lost-found/page.tsx:164:1
+Expected '</', got '<eof>'
+  162 |   </button>
+  163 | </form>
+> 164 |
+      | ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./app/lost-found/page.tsx [Client Component Browser]
+    ./app/lost-found/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/lost-found/page.tsx [Client Component SSR]
+    ./app/lost-found/page.tsx [Server Component]
+
+
+ GET /lost-found 500 in 12ms (next.js: 6ms, application-code: 6ms)
+[browser] Uncaught Error: ./app/lost-found/page.tsx:164:1
+Expected '</', got '<eof>'
+  162 |   </button>
+  163 | </form>
+> 164 |
+      | ^
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./app/lost-found/page.tsx [Client Component Browser]
+    ./app/lost-found/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/lost-found/page.tsx [Client Component SSR]
+    ./app/lost-found/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/lost-found/page.tsx:164:1)
+    at <unknown> (Error: (./app/lost-found/page.tsx:164:1)
+⨯ ./app/lost-found/page.tsx:164:1
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  162 |   </button>
+  163 | </form>
+> 164 | }
+      | ^
+  165 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./app/lost-found/page.tsx [Client Component Browser]
+    ./app/lost-found/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/lost-found/page.tsx [Client Component SSR]
+    ./app/lost-found/page.tsx [Server Component]
+
+
+ GET /lost-found 500 in 28ms (next.js: 22ms, application-code: 6ms)
+[browser] Uncaught Error: ./app/lost-found/page.tsx:164:1
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  162 |   </button>
+  163 | </form>
+> 164 | }
+      | ^
+  165 |
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./app/lost-found/page.tsx [Client Component Browser]
+    ./app/lost-found/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/lost-found/page.tsx [Client Component SSR]
+    ./app/lost-found/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/lost-found/page.tsx:164:1)
+    at <unknown> (Error: (./app/lost-found/page.tsx:164:1)
+✓ Compiled in 28ms
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/lost-found/page"
+    at ignore-listed frames {
+  page: '/lost-found'
+}
+ GET /lost-found 500 in 540ms (next.js: 529ms, application-code: 11ms)
+[browser] Uncaught Error: The default export is not a React Component in "/lost-found/page"
+✓ Compiled in 35ms
+ GET /lost-found 200 in 142ms (next.js: 41ms, application-code: 101ms)
+✓ Compiled in 32ms
+ GET /lost-found 200 in 64ms (next.js: 42ms, application-code: 22ms)
+✓ Compiled in 30ms
+ GET /lost-found 200 in 68ms (next.js: 45ms, application-code: 23ms)
+✓ Compiled in 33ms
+ GET /lost-found 200 in 58ms (next.js: 39ms, application-code: 19ms)
+✓ Compiled in 30ms
+ GET /lost-found 200 in 55ms (next.js: 38ms, application-code: 18ms)
+✓ Compiled in 29ms
+ GET /lost-found 200 in 89ms (next.js: 65ms, application-code: 24ms)
+✓ Compiled in 33ms
+ GET /lost-found 200 in 67ms (next.js: 47ms, application-code: 20ms)
+✓ Compiled in 33ms
+ GET /lost-found 200 in 65ms (next.js: 46ms, application-code: 19ms)
+✓ Compiled in 35ms
+ GET /lost-found 200 in 56ms (next.js: 37ms, application-code: 19ms)
+✓ Compiled in 31ms
+ GET /lost-found 200 in 55ms (next.js: 40ms, application-code: 16ms)
+✓ Compiled in 30ms
+ GET /lost-found 200 in 56ms (next.js: 40ms, application-code: 16ms)
+✓ Compiled in 30ms
+ GET /lost-found 200 in 56ms (next.js: 38ms, application-code: 18ms)
+✓ Compiled in 29ms
+ GET /lost-found 200 in 63ms (next.js: 39ms, application-code: 23ms)
+ GET /societies 404 in 28ms (next.js: 11ms, application-code: 17ms)
+ GET /societies 404 in 76ms (next.js: 3ms, application-code: 73ms)
+ GET /create-event 200 in 61ms (next.js: 43ms, application-code: 18ms)
+ GET /events 200 in 65ms (next.js: 47ms, application-code: 18ms)
+ GET /helpdesk 200 in 23ms (next.js: 10ms, application-code: 13ms)
+ GET /lost-found 200 in 15ms (next.js: 2ms, application-code: 12ms)
+ GET /canteen-menu 200 in 24ms (next.js: 10ms, application-code: 13ms)
+
+-----
+FATAL: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\revea\AppData\Local\Temp\next-panic-e7857c82ca864bf46821fab4d1219e9.log.
+
+To help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29&body=Turbopack%20version%3A%20%602275bd85%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0A%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A%0ACaused%20by%3A%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5Crevea%5C%5Ccampus-companion%5C%5Capp%5C%5Crecommendations%22%0A-%20Access%20is%20denied.%20%28os%20error%205%29%0A%0ADebug%20info%3A%0A-%20Execution%20of%20subscribe_issues_and_diags_operation%20failed%0A-%20Execution%20of%20%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aserver_changed%20failed%0A-%20Execution%20of%20%2AProject%3A%3Aserver_changed%20failed%0A-%20Execution%20of%20%2AAppEndpointOutput%3A%3Aserver_assets%20failed%0A-%20Execution%20of%20AppEndpoint%3A%3Aoutput%20failed%0A-%20Execution%20of%20AppProject%3A%3Aapp_module_graphs%20failed%0A-%20Execution%20of%20%2A%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aadditional_entries%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Afrom_graphs%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Acreate%20failed%0A-%20Execution%20of%20SingleModuleGraph%3A%3Anew_with_entries_visited_intern%20failed%0A-%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A-%20Execution%20of%20primary_chunkable_referenced_modules%20failed%0A-%20Execution%20of%20%3CCssModule%20as%20Module%3E%3A%3Areferences%20failed%0A-%20Execution%20of%20parse_css%20failed%0A-%20Execution%20of%20%3CPostCssTransformedAsset%20as%20Asset%3E%3A%3Acontent%20failed%0A-%20Execution%20of%20PostCssTransformedAsset%3A%3Aprocess%20failed%0A-%20Execution%20of%20evaluate_webpack_loader%20failed%0A-%20Execution%20of%20%3CDiskFileSystem%20as%20FileSystem%3E%3A%3Aread%20failed%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5Crevea%5C%5Ccampus-companion%5C%5Capp%5C%5Crecommendations%22%0A-%20Access%20is%20denied.%20%28os%20error%205%29%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+✓ Compiled in 4.6s
+
+-----
+FATAL: An unexpected Turbopack error occurred. A panic log has been written to C:\Users\revea\AppData\Local\Temp\next-panic-e7857c82ca864bf46821fab4d1219e9.log.
+
+To help make Turbopack better, report this error by clicking here: https://bugs.nextjs.org/search?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fcanteen-menu%2Fpage&body=Turbopack%20version%3A%20%602275bd85%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0AFailed%20to%20write%20app%20endpoint%20%2Fcanteen-menu%2Fpage%0A%0ACaused%20by%3A%0A-%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5Crevea%5C%5Ccampus-companion%5C%5Capp%5C%5Crecommendations%22%0A-%20Access%20is%20denied.%20%28os%20error%205%29%0A%0ADebug%20info%3A%0A-%20Execution%20of%20get_written_endpoint_with_issues_operation%20failed%0A-%20Execution%20of%20endpoint_write_to_disk%20failed%0A-%20Execution%20of%20%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aoutput%20failed%0A-%20Failed%20to%20write%20app%20endpoint%20%2Fcanteen-menu%2Fpage%0A-%20Execution%20of%20%2Aall_asset_paths%20failed%0A-%20Execution%20of%20%2AAppEndpointOutput%3A%3Aoutput_assets%20failed%0A-%20Execution%20of%20AppEndpoint%3A%3Aoutput%20failed%0A-%20Execution%20of%20AppProject%3A%3Aapp_module_graphs%20failed%0A-%20Execution%20of%20%2A%3CAppEndpoint%20as%20Endpoint%3E%3A%3Aadditional_entries%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Afrom_graphs%20failed%0A-%20Execution%20of%20ModuleGraph%3A%3Acreate%20failed%0A-%20Execution%20of%20SingleModuleGraph%3A%3Anew_with_entries_visited_intern%20failed%0A-%20%5Bproject%5D%2Fapp%2Fglobals.css%20%5Bapp-client%5D%20%28css%29%0A-%20Execution%20of%20primary_chunkable_referenced_modules%20failed%0A-%20Execution%20of%20%3CCssModule%20as%20Module%3E%3A%3Areferences%20failed%0A-%20Execution%20of%20parse_css%20failed%0A-%20Execution%20of%20%3CPostCssTransformedAsset%20as%20Asset%3E%3A%3Acontent%20failed%0A-%20Execution%20of%20PostCssTransformedAsset%3A%3Aprocess%20failed%0A-%20Execution%20of%20evaluate_webpack_loader%20failed%0A-%20Execution%20of%20%3CDiskFileSystem%20as%20FileSystem%3E%3A%3Aread%20failed%0A-%20reading%20file%20%22C%3A%5C%5CUsers%5C%5Crevea%5C%5Ccampus-companion%5C%5Capp%5C%5Crecommendations%22%0A-%20Access%20is%20denied.%20%28os%20error%205%29%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET /canteen-menu 500 in 60ms (next.js: 36ms, application-code: 24ms)
+ GET /canteen-menu 500 in 21ms (next.js: 7ms, application-code: 14ms)
+ GET /canteen-menu 500 in 20ms (next.js: 14ms, application-code: 6ms)
+[browser] Uncaught Error: An unexpected Turbopack error occurred. Please see the output of `next dev`for more details.
+⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/shared/lib/router/router.jschanged. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /canteen-menu 200 in 243ms (next.js: 172ms, application-code: 71ms)
+✓ Compiled in 4.6s
+ GET /canteen-menu 200 in 35ms (next.js: 3ms, application-code: 32ms)
+ GET /events 200 in 69ms (next.js: 54ms, application-code: 15ms)
+✓ Compiled in 31ms
+ GET /events 200 in 66ms (next.js: 45ms, application-code: 21ms)
+✓ Compiled in 27ms
+ GET /events 200 in 64ms (next.js: 44ms, application-code: 20ms)
+ GET /recommendations 200 in 286ms (next.js: 270ms, application-code: 16ms)
+ GET /settings 404 in 514ms (next.js: 463ms, application-code: 51ms)
+ GET /settings 404 in 329ms (next.js: 5ms, application-code: 323ms)
+ GET /recommendations 200 in 38ms (next.js: 14ms, application-code: 24ms)
+ GET /helpdesk 200 in 220ms (next.js: 191ms, application-code: 29ms)
+✓ Compiled in 29ms
+ GET /helpdesk 200 in 66ms (next.js: 46ms, application-code: 20ms)
+✓ Compiled in 30ms
+ GET /helpdesk 200 in 73ms (next.js: 51ms, application-code: 21ms)
+ GET / 200 in 223ms (next.js: 192ms, application-code: 30ms)
+[browser] Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET /helpdesk 200 in 16ms (next.js: 3ms, application-code: 13ms)
+ GET /events 200 in 167ms (next.js: 142ms, application-code: 26ms)
+ GET /create-event 200 in 200ms (next.js: 175ms, application-code: 25ms)
+ GET /events 200 in 16ms (next.js: 2ms, application-code: 14ms)
+ GET /create-event 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET /canteen-menu 200 in 172ms (next.js: 143ms, application-code: 29ms)
+ GET /lost-found 200 in 200ms (next.js: 176ms, application-code: 25ms)
+ GET /helpdesk 200 in 14ms (next.js: 2ms, application-code: 11ms)
+ GET /lost-found 200 in 20ms (next.js: 3ms, application-code: 17ms)
+ GET /canteen-menu 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET /create-event 200 in 17ms (next.js: 2ms, application-code: 14ms)
+ GET /helpdesk 200 in 16ms (next.js: 3ms, application-code: 14ms)
+ GET / 200 in 18ms (next.js: 3ms, application-code: 15ms)
+✓ Compiled in 90ms
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames {
+  page: '/'
+}
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames {
+  page: '/'
+}
+ GET / 500 in 1277ms (next.js: 1249ms, application-code: 27ms)
+ GET / 500 in 1276ms (next.js: 1270ms, application-code: 6ms)
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames {
+  page: '/'
+}
+ GET / 500 in 573ms (next.js: 445ms, application-code: 128ms)
+ GET / 200 in 25ms (next.js: 5ms, application-code: 21ms)
+ GET / 200 in 321ms (next.js: 72ms, application-code: 248ms)
+ GET /campus.jpg 404 in 138ms (next.js: 50ms, application-code: 88ms)
+ GET / 200 in 78ms (next.js: 41ms, application-code: 38ms)
+ GET / 200 in 86ms (next.js: 3ms, application-code: 84ms)
+ GET / 200 in 73ms (next.js: 2ms, application-code: 71ms)
+ GET / 200 in 77ms (next.js: 39ms, application-code: 37ms)
+ GET / 200 in 21ms (next.js: 3ms, application-code: 19ms)
+ GET / 200 in 85ms (next.js: 46ms, application-code: 39ms)
+ GET / 200 in 40ms (next.js: 2ms, application-code: 38ms)
+ GET /main 404 in 80ms (next.js: 9ms, application-code: 71ms)
+ GET / 200 in 70ms (next.js: 38ms, application-code: 33ms)
+ GET / 200 in 90ms (next.js: 2ms, application-code: 88ms)
+ GET /main_ 404 in 77ms (next.js: 7ms, application-code: 70ms)
+✓ Compiled in 12ms
+ GET / 200 in 92ms (next.js: 46ms, application-code: 47ms)
+ GET / 200 in 94ms (next.js: 3ms, application-code: 91ms)
+ GET /main_campus 404 in 80ms (next.js: 7ms, application-code: 73ms)
+[browser] An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+✓ Compiled in 12ms
+ GET / 200 in 78ms (next.js: 43ms, application-code: 35ms)
+ GET / 200 in 21ms (next.js: 3ms, application-code: 19ms)
+ GET /main_campus 404 in 86ms (next.js: 9ms, application-code: 77ms)
+ GET / 200 in 28ms (next.js: 2ms, application-code: 26ms)
+ GET /main_campus 404 in 38ms (next.js: 4ms, application-code: 34ms)
+ GET / 200 in 71ms (next.js: 37ms, application-code: 34ms)
+ GET / 200 in 16ms (next.js: 1974µs, application-code: 14ms)
+ GET / 200 in 70ms (next.js: 36ms, application-code: 34ms)
+ GET / 200 in 17ms (next.js: 3ms, application-code: 15ms)
+ GET / 200 in 64ms (next.js: 34ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 1931µs, application-code: 13ms)
+ GET / 200 in 75ms (next.js: 35ms, application-code: 39ms)
+ GET / 200 in 22ms (next.js: 2ms, application-code: 19ms)
+ GET / 200 in 71ms (next.js: 37ms, application-code: 34ms)
+ GET / 200 in 19ms (next.js: 2ms, application-code: 16ms)
+ GET / 200 in 80ms (next.js: 44ms, application-code: 36ms)
+ GET / 200 in 18ms (next.js: 2ms, application-code: 16ms)
+ GET / 200 in 66ms (next.js: 35ms, application-code: 31ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 14ms)
+ GET / 200 in 76ms (next.js: 36ms, application-code: 40ms)
+ GET / 200 in 18ms (next.js: 2ms, application-code: 16ms)
+ GET / 200 in 64ms (next.js: 35ms, application-code: 29ms)
+ GET / 200 in 14ms (next.js: 1840µs, application-code: 13ms)
+ GET / 200 in 67ms (next.js: 36ms, application-code: 31ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 63ms (next.js: 33ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 1943µs, application-code: 13ms)
+ GET / 200 in 64ms (next.js: 35ms, application-code: 29ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 14ms)
+ GET / 200 in 78ms (next.js: 48ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 90ms (next.js: 49ms, application-code: 41ms)
+ GET / 200 in 18ms (next.js: 3ms, application-code: 16ms)
+ GET / 200 in 76ms (next.js: 48ms, application-code: 29ms)
+ GET / 200 in 14ms (next.js: 1848µs, application-code: 13ms)
+ GET / 200 in 77ms (next.js: 49ms, application-code: 28ms)
+ GET / 200 in 15ms (next.js: 1870µs, application-code: 13ms)
+✓ Compiled in 13ms
+ GET / 200 in 94ms (next.js: 62ms, application-code: 32ms)
+ GET / 200 in 15ms (next.js: 1969µs, application-code: 13ms)
+ GET / 200 in 100ms (next.js: 67ms, application-code: 33ms)
+ GET / 200 in 15ms (next.js: 1986µs, application-code: 13ms)
+ GET / 200 in 89ms (next.js: 50ms, application-code: 39ms)
+ GET / 200 in 22ms (next.js: 3ms, application-code: 20ms)
+ GET / 200 in 94ms (next.js: 63ms, application-code: 31ms)
+ GET / 200 in 16ms (next.js: 1995µs, application-code: 14ms)
+ GET / 200 in 84ms (next.js: 52ms, application-code: 32ms)
+ GET / 200 in 19ms (next.js: 2ms, application-code: 17ms)
+ GET / 200 in 89ms (next.js: 58ms, application-code: 31ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 79ms (next.js: 48ms, application-code: 30ms)
+ GET / 200 in 17ms (next.js: 2ms, application-code: 14ms)
+ GET / 200 in 94ms (next.js: 54ms, application-code: 40ms)
+ GET / 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET / 200 in 84ms (next.js: 48ms, application-code: 35ms)
+ GET / 200 in 22ms (next.js: 1842µs, application-code: 20ms)
+ GET / 200 in 94ms (next.js: 54ms, application-code: 40ms)
+ GET / 200 in 23ms (next.js: 3ms, application-code: 20ms)
+ GET / 200 in 75ms (next.js: 47ms, application-code: 28ms)
+ GET / 200 in 15ms (next.js: 1783µs, application-code: 13ms)
+ GET / 200 in 77ms (next.js: 48ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 1929µs, application-code: 13ms)
+ GET / 200 in 78ms (next.js: 49ms, application-code: 30ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 88ms (next.js: 50ms, application-code: 38ms)
+ GET / 200 in 24ms (next.js: 1897µs, application-code: 22ms)
+ GET / 200 in 78ms (next.js: 48ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 1945µs, application-code: 13ms)
+ GET / 200 in 90ms (next.js: 59ms, application-code: 30ms)
+ GET / 200 in 16ms (next.js: 1994µs, application-code: 14ms)
+ GET / 200 in 96ms (next.js: 48ms, application-code: 48ms)
+ GET / 200 in 22ms (next.js: 3ms, application-code: 19ms)
+ GET / 200 in 76ms (next.js: 47ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 3ms, application-code: 13ms)
+ GET / 200 in 78ms (next.js: 49ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 1983µs, application-code: 14ms)
+⨯ ./app/page.tsx:17:97
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  15 |       <p className="text-lg max-w-2xl text-gray-700">
+  16 |         TUD has campuses all across dublin,like Grangegorman, Tallaght,
+> 17 |         and Blanchardstown and offers a wide range of programmes in " coords="" href="" alt=""/>
+     | ^
+  18 |         Campus Companion is a web application designed to help students
+  19 |         manage campus life. It includes event tracking, a helpdesk system,
+  20 |         a canteen menu, and a lost & found service — all powered by a
+
+Parsing ecmascript source code failed
+
+
+ GET / 500 in 33ms (next.js: 21ms, application-code: 12ms)
+⨯ ./app/page.tsx:17:97
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  15 |       <p className="text-lg max-w-2xl text-gray-700">
+  16 |         TUD has campuses all across dublin,like Grangegorman, Tallaght,
+> 17 |         and Blanchardstown and offers a wide range of programmes in " coords="" href="" alt=""/>
+     | ^
+  18 |         Campus Companion is a web application designed to help students
+  19 |         manage campus life. It includes event tracking, a helpdesk system,
+  20 |         a canteen menu, and a lost & found service — all powered by a
+
+Parsing ecmascript source code failed
+
+
+ GET / 500 in 16ms (next.js: 8ms, application-code: 8ms)
+[browser] Uncaught Error: ./app/page.tsx:17:97
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  15 |       <p className="text-lg max-w-2xl text-gray-700">
+  16 |         TUD has campuses all across dublin,like Grangegorman, Tallaght,
+> 17 |         and Blanchardstown and offers a wide range of programmes in " coords="" href="" alt=""/>
+     | ^
+  18 |         Campus Companion is a web application designed to help students
+  19 |         manage campus life. It includes event tracking, a helpdesk system,
+  20 |         a canteen menu, and a lost & found service — all powered by a
+
+Parsing ecmascript source code failed
+
+
+    at <unknown> (Error: ./app/page.tsx:17:97)
+    at <unknown> (Error: (./app/page.tsx:17:97)
+[browser] ./app/page.tsx:17:97
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  15 |       <p className="text-lg max-w-2xl text-gray-700">
+  16 |         TUD has campuses all across dublin,like Grangegorman, Tallaght,
+> 17 |         and Blanchardstown and offers a wide range of programmes in " coords="" href="" alt=""/>
+     | ^
+  18 |         Campus Companion is a web application designed to help students
+  19 |         manage campus life. It includes event tracking, a helpdesk system,
+  20 |         a canteen menu, and a lost & found service — all powered by a
+
+Parsing ecmascript source code failed
+[browser] ./app/page.tsx:17:97
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  15 |       <p className="text-lg max-w-2xl text-gray-700">
+  16 |         TUD has campuses all across dublin,like Grangegorman, Tallaght,
+> 17 |         and Blanchardstown and offers a wide range of programmes in " coords="" href="" alt=""/>
+     | ^
+  18 |         Campus Companion is a web application designed to help students
+  19 |         manage campus life. It includes event tracking, a helpdesk system,
+  20 |         a canteen menu, and a lost & found service — all powered by a
+
+Parsing ecmascript source code failed
+ GET / 200 in 140ms (next.js: 58ms, application-code: 82ms)
+ GET / 200 in 49ms (next.js: 2ms, application-code: 46ms)
+ GET / 200 in 83ms (next.js: 49ms, application-code: 34ms)
+ GET / 200 in 19ms (next.js: 3ms, application-code: 17ms)
+ GET / 200 in 81ms (next.js: 49ms, application-code: 32ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 87ms (next.js: 48ms, application-code: 40ms)
+ GET / 200 in 22ms (next.js: 3ms, application-code: 19ms)
+ GET / 200 in 84ms (next.js: 51ms, application-code: 33ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 87ms (next.js: 50ms, application-code: 37ms)
+ GET / 200 in 21ms (next.js: 2ms, application-code: 19ms)
+ GET / 200 in 79ms (next.js: 49ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 84ms (next.js: 52ms, application-code: 33ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 89ms (next.js: 49ms, application-code: 40ms)
+ GET / 200 in 24ms (next.js: 3ms, application-code: 21ms)
+ GET / 200 in 78ms (next.js: 49ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 1913µs, application-code: 13ms)
+ GET / 200 in 85ms (next.js: 52ms, application-code: 33ms)
+ GET / 200 in 18ms (next.js: 2ms, application-code: 16ms)
+ GET / 200 in 80ms (next.js: 50ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 77ms (next.js: 47ms, application-code: 29ms)
+ GET / 200 in 15ms (next.js: 1967µs, application-code: 13ms)
+ GET / 200 in 90ms (next.js: 48ms, application-code: 42ms)
+ GET / 200 in 17ms (next.js: 2ms, application-code: 15ms)
+ GET / 200 in 84ms (next.js: 48ms, application-code: 36ms)
+ GET / 200 in 23ms (next.js: 1830µs, application-code: 21ms)
+ GET / 200 in 78ms (next.js: 48ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 77ms (next.js: 47ms, application-code: 30ms)
+ GET / 200 in 17ms (next.js: 2ms, application-code: 15ms)
+ GET / 200 in 79ms (next.js: 48ms, application-code: 30ms)
+ GET / 200 in 17ms (next.js: 2ms, application-code: 14ms)
+ GET / 200 in 79ms (next.js: 48ms, application-code: 30ms)
+ GET / 200 in 17ms (next.js: 2ms, application-code: 14ms)
+ GET / 200 in 87ms (next.js: 49ms, application-code: 38ms)
+ GET / 200 in 16ms (next.js: 1926µs, application-code: 14ms)
+ GET / 200 in 79ms (next.js: 49ms, application-code: 29ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 80ms (next.js: 50ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 94ms (next.js: 49ms, application-code: 45ms)
+ GET / 200 in 20ms (next.js: 3ms, application-code: 17ms)
+ GET / 200 in 78ms (next.js: 48ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 77ms (next.js: 49ms, application-code: 28ms)
+ GET / 200 in 14ms (next.js: 1861µs, application-code: 13ms)
+ GET / 200 in 83ms (next.js: 50ms, application-code: 33ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 84ms (next.js: 51ms, application-code: 33ms)
+ GET / 200 in 17ms (next.js: 1968µs, application-code: 15ms)
+ GET / 200 in 92ms (next.js: 61ms, application-code: 31ms)
+ GET / 200 in 16ms (next.js: 1920µs, application-code: 14ms)
+ GET / 200 in 89ms (next.js: 55ms, application-code: 34ms)
+ GET / 200 in 19ms (next.js: 2ms, application-code: 17ms)
+ GET / 200 in 79ms (next.js: 49ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 82ms (next.js: 51ms, application-code: 31ms)
+ GET / 200 in 17ms (next.js: 1856µs, application-code: 15ms)
+ GET / 200 in 90ms (next.js: 55ms, application-code: 35ms)
+ GET / 200 in 15ms (next.js: 3ms, application-code: 13ms)
+ GET / 200 in 92ms (next.js: 48ms, application-code: 43ms)
+ GET / 200 in 22ms (next.js: 3ms, application-code: 20ms)
+ GET / 200 in 81ms (next.js: 52ms, application-code: 30ms)
+ GET / 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET / 200 in 77ms (next.js: 48ms, application-code: 30ms)
+ GET / 200 in 15ms (next.js: 1780µs, application-code: 13ms)
+ GET / 200 in 82ms (next.js: 50ms, application-code: 32ms)
+ GET / 200 in 14ms (next.js: 1728µs, application-code: 13ms)
+ GET / 200 in 85ms (next.js: 50ms, application-code: 34ms)
+ GET / 200 in 18ms (next.js: 3ms, application-code: 15ms)
+ GET / 200 in 79ms (next.js: 48ms, application-code: 31ms)
+ GET / 200 in 16ms (next.js: 3ms, application-code: 13ms)
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames {
+  page: '/'
+}
+ GET / 500 in 589ms (next.js: 575ms, application-code: 13ms)
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames {
+  page: '/'
+}
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/page"
+    at ignore-listed frames {
+  page: '/'
+}
+ GET / 500 in 772ms (next.js: 378ms, application-code: 394ms)
+ GET / 500 in 406ms (next.js: 399ms, application-code: 7ms)
+[browser] Uncaught Error: The default export is not a React Component in "/page"
+✓ Compiled in 18ms
+ GET / 200 in 142ms (next.js: 48ms, application-code: 93ms)
+✓ Compiled in 14ms
+ GET / 200 in 91ms (next.js: 57ms, application-code: 34ms)
+ GET / 200 in 15ms (next.js: 1905µs, application-code: 13ms)
+ GET / 200 in 91ms (next.js: 51ms, application-code: 39ms)
+ GET / 200 in 21ms (next.js: 2ms, application-code: 19ms)
+ GET / 200 in 82ms (next.js: 3ms, application-code: 80ms)
+ GET /canteen-menu 200 in 29ms (next.js: 14ms, application-code: 16ms)
+ GET /events 200 in 28ms (next.js: 13ms, application-code: 14ms)
+ GET / 200 in 14ms (next.js: 2ms, application-code: 12ms)
+ GET / 200 in 83ms (next.js: 50ms, application-code: 33ms)
+ GET / 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET / 200 in 92ms (next.js: 55ms, application-code: 37ms)
+ GET / 200 in 22ms (next.js: 2ms, application-code: 20ms)
+✓ Compiled in 13ms
+ GET / 200 in 104ms (next.js: 62ms, application-code: 41ms)
+ GET / 200 in 20ms (next.js: 3ms, application-code: 17ms)
+✓ Compiled in 13ms
+ GET / 200 in 111ms (next.js: 69ms, application-code: 42ms)
+ GET / 200 in 23ms (next.js: 3ms, application-code: 20ms)
+ GET /events 200 in 29ms (next.js: 14ms, application-code: 15ms)
+✓ Compiled in 37ms
+ GET /events 200 in 100ms (next.js: 63ms, application-code: 38ms)
+ GET /events 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET /events 200 in 219ms (next.js: 2ms, application-code: 217ms)
+✓ Compiled in 19ms
+ GET /events 200 in 82ms (next.js: 63ms, application-code: 19ms)
+✓ Compiled in 18ms
+ GET /events 200 in 77ms (next.js: 56ms, application-code: 21ms)
+ GET /events 200 in 118ms (next.js: 3ms, application-code: 116ms)
+✓ Compiled in 18ms
+ GET /events 200 in 77ms (next.js: 57ms, application-code: 20ms)
+✓ Compiled in 7ms
+ GET /events 200 in 78ms (next.js: 61ms, application-code: 18ms)
+✓ Compiled in 8ms
+ GET /events 200 in 79ms (next.js: 61ms, application-code: 18ms)
+✓ Compiled in 7ms
+ GET /events 200 in 87ms (next.js: 64ms, application-code: 23ms)
+✓ Compiled in 7ms
+ GET /events 200 in 78ms (next.js: 59ms, application-code: 19ms)
+✓ Compiled in 19ms
+ GET /events 200 in 82ms (next.js: 61ms, application-code: 20ms)
+✓ Compiled in 7ms
+ GET /events 200 in 84ms (next.js: 62ms, application-code: 22ms)
+PS C:\Users\revea\campus-companion>
+                                    ^C
+PS C:\Users\revea\campus-companion> npm run dev
+
+> campus-companion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.223:3000
+- Environments: .env.local
+✓ Ready in 3.7s
+
+ GET /events 200 in 537ms (next.js: 342ms, application-code: 195ms)
+ GET /events 200 in 44ms (next.js: 5ms, application-code: 39ms)
+✓ Compiled in 45ms
+ GET /events 200 in 96ms (next.js: 59ms, application-code: 37ms)
+✓ Compiled in 17ms
+ GET /events 200 in 74ms (next.js: 52ms, application-code: 22ms)
+✓ Compiled in 31ms
+ GET /events 200 in 61ms (next.js: 44ms, application-code: 17ms)
+✓ Compiled in 19ms
+ GET /events 200 in 63ms (next.js: 43ms, application-code: 20ms)
+✓ Compiled in 18ms
+ GET /events 200 in 60ms (next.js: 44ms, application-code: 16ms)
+✓ Compiled in 6ms
+ GET /events 200 in 58ms (next.js: 39ms, application-code: 19ms)
+✓ Compiled in 18ms
+ GET /events 200 in 63ms (next.js: 46ms, application-code: 18ms)
+✓ Compiled in 17ms
+ GET /events 200 in 59ms (next.js: 38ms, application-code: 20ms)
+✓ Compiled in 18ms
+ GET /events 200 in 64ms (next.js: 46ms, application-code: 17ms)
+✓ Compiled in 18ms
+ GET /events 200 in 58ms (next.js: 40ms, application-code: 17ms)
+✓ Compiled in 15ms
+ GET /events 200 in 58ms (next.js: 40ms, application-code: 19ms)
+✓ Compiled in 16ms
+ GET /events 200 in 59ms (next.js: 39ms, application-code: 20ms)
+✓ Compiled in 20ms
+ GET /events 200 in 61ms (next.js: 45ms, application-code: 17ms)
+✓ Compiled in 18ms
+ GET /events 200 in 52ms (next.js: 38ms, application-code: 15ms)
+✓ Compiled in 16ms
+ GET /events 200 in 61ms (next.js: 41ms, application-code: 20ms)
+✓ Compiled in 16ms
+ GET /events 200 in 62ms (next.js: 43ms, application-code: 19ms)
+✓ Compiled in 17ms
+ GET /events 200 in 55ms (next.js: 37ms, application-code: 17ms)
+ GET /create-event 200 in 43ms (next.js: 27ms, application-code: 16ms)
+✓ Compiled in 61ms
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+ GET /create-event 500 in 1281ms (next.js: 777ms, application-code: 504ms)
+ GET /create-event 500 in 771ms (next.js: 762ms, application-code: 9ms)
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames
+⨯ Error: The default export is not a React Component in "/create-event/page"
+    at ignore-listed frames {
+  page: '/create-event'
+}
+✓ Compiled in 0ms
+ GET /create-event 500 in 826ms (next.js: 694ms, application-code: 132ms)
+ GET /create-event 500 in 491ms (next.js: 481ms, application-code: 11ms)
+ GET /create-event 200 in 58ms (next.js: 42ms, application-code: 17ms)
+[browser] Uncaught Error: The default export is not a React Component in "/create-event/page"
+ GET /create-event 200 in 109ms (next.js: 2ms, application-code: 107ms)
+✓ Compiled in 19ms
+ GET /create-event 200 in 67ms (next.js: 45ms, application-code: 22ms)
+✓ Compiled in 19ms
+ GET /create-event 200 in 57ms (next.js: 38ms, application-code: 19ms)
+✓ Compiled in 18ms
+ GET /create-event 200 in 56ms (next.js: 38ms, application-code: 17ms)
+✓ Compiled in 17ms
+ GET /create-event 200 in 54ms (next.js: 38ms, application-code: 16ms)
+✓ Compiled in 19ms
+ GET /create-event 200 in 57ms (next.js: 38ms, application-code: 19ms)
+✓ Compiled in 18ms
+ GET /create-event 200 in 55ms (next.js: 37ms, application-code: 19ms)
+ GET /canteen-menu 200 in 41ms (next.js: 27ms, application-code: 13ms)
+ GET /lost-found 200 in 39ms (next.js: 24ms, application-code: 16ms)
+ GET /helpdesk 200 in 40ms (next.js: 24ms, application-code: 16ms)
+ GET /recommendations 200 in 39ms (next.js: 26ms, application-code: 13ms)
+ GET /helpdesk 200 in 15ms (next.js: 2ms, application-code: 13ms)
+ GET /lost-found 200 in 15ms (next.js: 2ms, application-code: 12ms)
+ GET /canteen-menu 200 in 15ms (next.js: 2ms, application-code: 12ms)
+ GET /create-event 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET /events 200 in 23ms (next.js: 10ms, application-code: 13ms)
+ GET / 200 in 40ms (next.js: 26ms, application-code: 15ms)
+ GET /events 200 in 15ms (next.js: 3ms, application-code: 12ms)
+ GET /create-event 200 in 15ms (next.js: 3ms, application-code: 13ms)
+ GET /canteen-menu 200 in 16ms (next.js: 2ms, application-code: 13ms)
+ GET /lost-found 200 in 14ms (next.js: 2ms, application-code: 12ms)
+ GET /helpdesk 200 in 17ms (next.js: 3ms, application-code: 14ms)
+ GET /recommendations 200 in 16ms (next.js: 3ms, application-code: 13ms)
+ GET /helpdesk 200 in 15ms (next.js: 2ms, application-code: 12ms)
+✓ Compiled in 15ms
+ GET /helpdesk 200 in 44ms (next.js: 24ms, application-code: 20ms)
+✓ Compiled in 12ms
+ GET /helpdesk 200 in 41ms (next.js: 21ms, application-code: 20ms)
+✓ Compiled in 14ms
+ GET /helpdesk 200 in 40ms (next.js: 23ms, application-code: 17ms)
+✓ Compiled in 19ms
+ GET /helpdesk 200 in 44ms (next.js: 24ms, application-code: 20ms)
+ GET /recommendations 200 in 18ms (next.js: 6ms, application-code: 12ms)
+ GET / 200 in 17ms (next.js: 6ms, application-code: 11ms)
+✓ Compiled in 46ms
+ GET / 200 in 53ms (next.js: 37ms, application-code: 16ms)
+✓ Compiled in 29ms
+ GET / 200 in 67ms (next.js: 42ms, application-code: 25ms)
+PS C:\Users\revea\campus-companion>
+                                    ^C
+PS C:\Users\revea\campus-companion> npm run dev
+Could not determine Node.js install directory
+PS C:\Users\revea\campus-companion> ..
+.. : The term '..' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ..
++ ~~
+    + CategoryInfo          : ObjectNotFound: (..:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\revea\campus-companion> cd
+cd : Cannot find path 'C:\Users\revea\campus-companion' because it does not exist.
+At line:1 char:1
++ cd
++ ~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\revea\campus-companion:String) [Set-Location], ItemNotFoundExc
+   eption
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\revea\campus-companion> cd .
+cd : Cannot find path 'C:\Users\revea\campus-companion' because it does not exist.
+At line:1 char:1
++ cd .
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\revea\campus-companion:String) [Set-Location], ItemNotFoundExc
+   eption
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\revea\campus-companion> cd ..
+PS C:\Users\revea> cd desktop
+PS C:\Users\revea\desktop> cd CA3_CampusCompanion_Group34_a00024837
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837> cd campus-companion
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> npm run dev
+
+> campus-companion@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.223:3000
+- Environments: .env.local
+✓ Ready in 375ms
+
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion>
+                                                                                  ^C
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> ls
+
+
+    Directory: C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        29/04/2026     23:17                .next
+d-----        29/04/2026     19:20                app
+d-----        29/04/2026     16:47                components
+d-----        29/04/2026     16:34                data
+d-----        29/04/2026     16:49                lib
+d-----        29/04/2026     17:21                node_modules
+d-----        29/04/2026     22:07                public
+d-----        29/04/2026     16:49                types
+-a----        29/04/2026     17:19            143 .env.local
+-a----        29/04/2026     16:14            480 .gitignore
+-a----        29/04/2026     16:16            327 AGENTS.md
+-a----        29/04/2026     16:16             11 CLAUDE.md
+-a----        29/04/2026     16:15            465 eslint.config.mjs
+-a----        29/04/2026     17:22            251 next-env.d.ts
+-a----        29/04/2026     16:15            133 next.config.ts
+-a----        29/04/2026     17:21         234527 package-lock.json
+-a----        29/04/2026     17:21            579 package.json
+-a----        29/04/2026     16:15             94 postcss.config.mjs
+-a----        29/04/2026     16:15           1450 README.md
+-a----        29/04/2026     17:30            686 tsconfig.json
+
+
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git init
+Initialized empty Git repository in C:/Users/revea/Desktop/CA3_CampusCompanion_Group34_a00024837/campus-companion/.git/
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'CLAUDE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/globals.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/layout.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/page.tsx', LF will be replaced by CRLF the next time Git touchesit
+warning: in the working copy of 'eslint.config.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'next.config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touchesit
+warning: in the working copy of 'postcss.config.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git commit -m "A00024837 CA3 commit - Campus Companion project"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'revea@DESKTOP-MQG87U2.(none)')
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git remote add origin https://github.com/YR-Kens/CA3_Group34_Nature_of_entreprise.git
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git branch -M main
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/YR-Kens/CA3_Group34_Nature_of_entreprise.git'
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git config --globaluser.email "a00024837@mytudublin.ie"
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git config --globaluser.name "Yaseen Rahman"
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git commit -m "A00024837 CA3 commit - Campus Companion project"
+[main (root-commit) ceb73bf] A00024837 CA3 commit - Campus Companion project
+ 34 files changed, 7938 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 AGENTS.md
+ create mode 100644 CLAUDE.md
+ create mode 100644 README.md
+ create mode 100644 app/canteen-menu/page.tsx
+ create mode 100644 app/create-event/page.tsx
+ create mode 100644 app/events/page.tsx
+ create mode 100644 app/favicon.ico
+ create mode 100644 app/globals.css
+ create mode 100644 app/helpdesk/page.tsx
+ create mode 100644 app/layout.tsx
+ create mode 100644 app/lost-found/page.tsx
+ create mode 100644 app/page.tsx
+ create mode 100644 app/recommendations/page.tsx
+ create mode 100644 components/EventCard.tsx
+ create mode 100644 components/FilterBar.tsx
+ create mode 100644 components/Navbar.tsx
+ create mode 100644 data/events.ts
+ create mode 100644 data/students.ts
+ create mode 100644 eslint.config.mjs
+ create mode 100644 lib/supabaseClient.ts
+ create mode 100644 next.config.ts
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 postcss.config.mjs
+ create mode 100644 public/file.svg
+ create mode 100644 public/globe.svg
+ create mode 100644 public/main_campus.jpg
+ create mode 100644 public/next.svg
+ create mode 100644 public/vercel.svg
+ create mode 100644 public/window.svg
+ create mode 100644 tsconfig.json
+ create mode 100644 types/event.ts
+ create mode 100644 types/ticket.ts
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> git push -u origin main
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (45/45), 208.34 KiB | 13.02 MiB/s, done.
+Total 45 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/YR-Kens/CA3_Group34_Nature_of_entreprise.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion> ^C
+PS C:\Users\revea\desktop\CA3_CampusCompanion_Group34_a00024837\campus-companion>
